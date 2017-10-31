@@ -1,0 +1,33 @@
+{
+    "name": "bpocallaghan/fq",
+    "description": "Add Frequently Asked Questions to your laravel admin project - https://github.com/bpocallaghan/laravel-admin-starter",
+    "keywords": [
+        "laravel",
+        "admin",
+        "cms",
+        "faq",
+        "frequently asked questions"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben-Piet O'Callaghan",
+            "email": "bpocallaghan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bpocallaghan\\FAQ\\": "app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bpocallaghan\\FAQ\\FAQServiceProvider"
+            ]
+        }
+    }
+}
