@@ -101,6 +101,10 @@ class PublishCommand extends Command
         $destination = resource_path('views\admin\faq');
         $this->copyFilesFromSource($source, $destination);
 
+        $source = $this->basePath . "resources\\views\admin\\categories";
+        $destination = resource_path('views\admin\faq\\categories');
+        $this->copyFilesFromSource($source, $destination);
+
         // WEBSITE
         $source = $this->basePath . "resources\\views\website";
         $destination = resource_path('views\website\faq');
@@ -162,7 +166,7 @@ class PublishCommand extends Command
     {
         $source = $this->formatFilePath($source . DIRECTORY_SEPARATOR);
         $destination = $this->formatFilePath($destination . DIRECTORY_SEPARATOR);
-        $files = collect($this->filesystem->allFiles($source));
+        $files = collect($this->filesystem->files($source));
 
         // can we override the existing files or not
         $override = $this->overrideExistingFiles($files, $destination);
