@@ -171,14 +171,14 @@ class PublishCommand extends Command
         // can we override the existing files or not
         $override = $this->overrideExistingFiles($files, $destination);
 
-        $files->map(function (SplFileInfo $file) use (
+        $files->map(function ( $file) use (
             $source,
             $destination,
             $override,
             $search,
             $replace
         ) {
-
+            $file = new \Symfony\Component\HttpFoundation\File\File($file);
             $fileSource = $source . $file->getFilename();
             $fileDestination = $destination . $file->getFilename();
 
@@ -221,8 +221,11 @@ class PublishCommand extends Command
     {
         $answer = true;
         $filesFound = [];
+
         // map over to see if same filename already exist in destination
-        $files->map(function (SplFileInfo $file) use ($destination, &$filesFound) {
+        $files->map(function ($file) use ($destination, &$filesFound) {
+            $file = new \Symfony\Component\HttpFoundation\File\File($file);
+
             if ($this->filesystem->exists($destination . $file->getFilename())) {
                 $filesFound [] = $file->getFilename();
             }
