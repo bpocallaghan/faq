@@ -2,9 +2,9 @@
 
 namespace Bpocallaghan\FAQ\Models;
 
-use Titan\Models\TitanCMSModel;
 use Bpocallaghan\Sluggable\HasSlug;
 use Bpocallaghan\Sluggable\SlugOptions;
+use Bpocallaghan\Titan\Models\TitanCMSModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class FAQ extends TitanCMSModel

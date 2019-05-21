@@ -6,7 +6,7 @@ use Redirect;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Bpocallaghan\FAQ\Models\FaqCategory;
-use App\Http\Controllers\Admin\AdminController;
+use Bpocallaghan\Titan\Http\Controllers\Admin\AdminController;
 
 class CategoriesController extends AdminController
 {

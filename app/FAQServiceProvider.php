@@ -14,8 +14,7 @@ class FAQServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/admin', 'admin.faq');
-        $this->loadViewsFrom(__DIR__ . '/../resources/views/website', 'website.faq');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'faq');
 
         $this->registerCommand(PublishCommand::class, 'publish');
     }

@@ -6,9 +6,9 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Bpocallaghan\FAQ\Models\FAQ;
 use Bpocallaghan\FAQ\Models\FaqCategory;
-use Titan\Controllers\TitanAdminController;
+use Bpocallaghan\Titan\Http\Controllers\Admin\AdminController;
 
-class OrderController extends TitanAdminController
+class OrderController extends AdminController
 {
     /**
      * Display a listing of the resource.

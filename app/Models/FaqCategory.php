@@ -2,8 +2,8 @@
 
 namespace Bpocallaghan\FAQ\Models;
 
-use Titan\Models\TitanCMSModel;
 use Bpocallaghan\Sluggable\HasSlug;
+use Bpocallaghan\Titan\Models\TitanCMSModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class FaqCategory extends TitanCMSModel
