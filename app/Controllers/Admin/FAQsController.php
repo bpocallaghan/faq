@@ -88,7 +88,7 @@ class FAQsController extends AdminController
 
         $this->updateEntry($faq, $request->only('question', 'answer', 'category_id'));
 
-        return redirect_to_resource();
+        return $this->view('faq::update')->with('item', $faq->fresh());
     }
 
     /**
