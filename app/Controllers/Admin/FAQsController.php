@@ -72,7 +72,7 @@ class FAQsController extends AdminController
     {
         $categories = FaqCategory::getAllList();
 
-        return $this->view('faq::create_edit', compact('categories'))->with('item', $faq);
+        return $this->view('faq::edit', compact('categories'))->with('item', $faq);
     }
 
     /**
